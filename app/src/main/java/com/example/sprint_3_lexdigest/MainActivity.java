@@ -9,6 +9,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // É esta linha abaixo que conecta o Java com o seu Layout visual!
-        setContentView(R.layout.activity_main);
     }
 }
