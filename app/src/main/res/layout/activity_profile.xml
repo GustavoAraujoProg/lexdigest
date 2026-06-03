@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_header_lex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@android:drawable/ic_media_previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Editar perfil"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnVoltar"
+        app:layout_constraintStart_toEndOf="@id/btnVoltar"
+        app:layout_constraintTop_toTopOf="@id/btnVoltar" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPerfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/foto_perfil"
+        app:layout_constraintBottom_toBottomOf="@id/imgHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgHeader"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+    <ImageView
+        android:id="@+id/btnEditarFoto"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/ic_launcher_background"
+        android:padding="6dp"
+        android:src="@android:drawable/ic_menu_edit"
+        app:layout_constraintBottom_toBottomOf="@id/imgPerfil"
+        app:layout_constraintEnd_toEndOf="@id/imgPerfil"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/imgPerfil"
+        app:layout_constraintVertical_bias="1.0"
+        app:tint="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_campo_borda"
+        android:drawablePadding="12dp"
+        android:drawableStart="@android:drawable/ic_menu_myplaces"
+        android:paddingHorizontal="16dp"
+        android:text="André Rodrigues"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPerfil" />
+
+    <EditText
+        android:id="@+id/etDataNascimento"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_campo_borda"
+        android:drawablePadding="12dp"
+        android:drawableStart="@android:drawable/ic_menu_my_calendar"
+        android:paddingHorizontal="16dp"
+        android:text="01/01/1988"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNome" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_campo_borda"
+        android:drawablePadding="12dp"
+        android:drawableStart="@android:drawable/ic_dialog_email"
+        android:paddingHorizontal="16dp"
+        android:text="andrerodrigues@mail.com"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDataNascimento" />
+
+    <LinearLayout
+        android:id="@+id/llTelefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail">
+
+        <TextView
+            android:id="@+id/tvDDI"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_campo_borda"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:text="+55 (BR)"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            app:drawableEndCompat="@android:drawable/arrow_down_float" />
+
+        <EditText
+            android:id="@+id/etTelefone"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_campo_borda"
+            android:paddingHorizontal="16dp"
+            android:text="(11) 97608 - 9000"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEspecialidade"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_campo_borda"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:text="Especialidade"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:drawableEndCompat="@android:drawable/ic_media_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llTelefone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

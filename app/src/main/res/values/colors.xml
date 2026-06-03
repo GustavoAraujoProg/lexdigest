@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="marrom_lex">#592A08</color> <color name="cinza_texto">#666666</color>
+    <color name="cinza_linha">#CCCCCC</color>
+</resources>
