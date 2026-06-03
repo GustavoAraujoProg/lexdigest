@@ -97,7 +97,7 @@
         <ImageView
             android:layout_width="33dp"
             android:layout_height="33dp"
-            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:src="@drawable/ic_sair"
             app:tint="#444444" />
 
         <TextView

@@ -33,6 +33,9 @@
             android:name=".HomeActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".MenuActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>
