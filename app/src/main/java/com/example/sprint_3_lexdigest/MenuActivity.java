@@ -12,18 +12,15 @@ public class MenuActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        // Apanha o botão de "Sair" (com o ícone de X) do seu layout
         LinearLayout btnSair = findViewById(R.id.menu_sair);
 
-        // Agora ele APENAS FECHA O MENU e volta para onde você estava
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish(); // Destrói o menu e volta para a tela de fundo
+                finish();
             }
         });
 
-        // O botão "Home" também pode apenas fechar o menu, se a pessoa já estiver na Home
         findViewById(R.id.menu_home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

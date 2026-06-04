@@ -47,7 +47,6 @@ public class CadastroActivity extends AppCompatActivity {
                     boolean inserido = dbHelper.inserirUsuario("", email, senha, "", telefone);
 
                     if (inserido) {
-                        // SUCESSO: Vamos gravar na memória que o usuário agora TEM CONTA
                         SharedPreferences prefs = getSharedPreferences("LexDigestPrefs", MODE_PRIVATE);
                         SharedPreferences.Editor editor = prefs.edit();
                         editor.putBoolean("tem_conta", true);
@@ -55,7 +54,6 @@ public class CadastroActivity extends AppCompatActivity {
 
                         Toast.makeText(CadastroActivity.this, "Conta criada com sucesso!", Toast.LENGTH_SHORT).show();
 
-                        // Redireciona para o Login após cadastrar
                         Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();

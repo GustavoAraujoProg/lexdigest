@@ -39,11 +39,9 @@ public class LoginActivity extends AppCompatActivity {
                     if (isValid) {
                         Toast.makeText(LoginActivity.this, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
 
-                        // Redireciona para a HomeActivity
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
 
-                        // O finish() encerra a tela de Login para o utilizador não conseguir voltar para ela clicando no botão de "Voltar" do telemóvel
                         finish();
                     } else {
                         Toast.makeText(LoginActivity.this, "Email ou senha incorretos", Toast.LENGTH_SHORT).show();
