@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".ResultadoActivity">
 
     <ImageView
         android:id="@+id/imgHeader"
@@ -19,8 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
-        android:id="@+id/btnMenu"
-        android:layout_width="48dp"
+        android:id="@+id/btnVoltar"  android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
@@ -61,6 +60,7 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/tvResultado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
