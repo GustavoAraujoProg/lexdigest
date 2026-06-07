@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.sprint_3_lexdigest.database.DataBaseHelper;
@@ -13,6 +14,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail, etSenha;
     private Button btnEntrar;
+    private TextView tvNaoLembraLogin;
     private DataBaseHelper dbHelper;
 
     @Override
@@ -25,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etSenha = findViewById(R.id.etSenha);
         btnEntrar = findViewById(R.id.btnEntrar);
+        tvNaoLembraLogin = findViewById(R.id.tvNaoLembraLogin);
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,5 +52,15 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (tvNaoLembraLogin != null) {
+            tvNaoLembraLogin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 }

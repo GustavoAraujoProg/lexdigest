@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.sprint_3_lexdigest.database.DataBaseHelper;
@@ -14,6 +15,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     private EditText etEmail, etPhone, etSenha, etConfirmaSenha;
     private Button btnCriarConta;
+    private TextView tvVoltarLogin;
     private DataBaseHelper dbHelper;
 
     @Override
@@ -28,6 +30,7 @@ public class CadastroActivity extends AppCompatActivity {
         etSenha = findViewById(R.id.etSenha);
         etConfirmaSenha = findViewById(R.id.etConfirmaSenha);
         btnCriarConta = findViewById(R.id.btnCriarConta);
+        tvVoltarLogin = findViewById(R.id.tvVoltarLogin);
 
         btnCriarConta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,5 +66,14 @@ public class CadastroActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (tvVoltarLogin != null) {
+            tvVoltarLogin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+        }
     }
 }
